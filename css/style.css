@@ -1,0 +1,252 @@
+/***
+File: style.css
+GUI Assignment: HW4
+Austin Nguyen, UMass Lowell, austin_nguyen@student.uml.edu
+Copyright (c) 2024. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+
+Updated on November 27, 2024 by Austin Nguyen
+
+This file contains the CSS sheet used to style the HTML elements, mostly the table and form.
+Form styling itself is minimal, with most of the focus on the position of the containers in 
+relation to the table. 
+
+File produced for Homework 4, identitical to the previous Homework 3 CSS file.
+***/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.container {
+    display: block;
+    flex-direction: column;
+    margin-left: 140px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-container {
+    display: block;
+    flex-direction: column;
+    margin-left: 110px;
+}
+
+.form-container {
+    min-width: 200px;
+    max-width: 200px;
+    height: 90%;
+    padding: 20px 20px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+/* Styling for the form */
+/* Form container */
+.form-container h5 {
+    margin: 10px 0 5px 0;
+    font-size: small;
+    font-style: italic;
+}
+
+/* Space between inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0044ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0033cc;
+}
+
+/* Slider Styling */
+.slider {
+    margin: 5px 0;
+}
+
+/* Tabs Container */
+#tabs {
+    max-width: 800px;
+    margin: 0 auto; /* Center align, remove left margin */
+    padding: 10px;
+}
+
+/* Tab itself and not tab content */
+#tabs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Below the tab */
+#tabs ul li {
+    background-color: white;
+    display: inline-flex;
+    position: relative;
+}
+
+/* Tab Text */
+#tabs ul li a {
+    text-decoration: none;
+    background-color: #f3f4f6;
+    color: #0044ff;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+/* Hover and active tab */
+#tabs ul li a:hover,
+#tabs ul li a.ui-tabs-active {
+    background-color: #0044ff;
+    color: white;
+    border-bottom: none;
+}
+
+/* Delete button for tab */
+#tabs ul li .delete-tab {
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* Hover for delete button */
+#tabs ul li .delete-tab:hover {
+    background-color: darkblue;
+}
+
+/* Tab Content */
+.tab-content {
+    background-color: white;
+    overflow: auto;
+    margin: 0px;
+}
+
+#table-container {
+    position: fixed;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    max-height: 80vh;
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+}
+
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin: 0; /* Reset table margin */
+
+}
+
+/* Table tag styling, see script.js for more information */
+/* Set square shape for all cells */
+#colHeader, #rowHeader, #value, #blankCell {
+    padding: 0;
+    border: none;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    max-width: 60px; /* Unnecessary, but just in case */
+    max-height: 60px; /* Ditto */
+}
+
+/* Styling for the top-left corner cell, will cover scrolling  */
+#blankCell {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3; /* Make sure it's on top */
+}
+
+/* Column headers */
+#colHeader {
+    font-weight: bold;
+    background-color: #0044ff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Row headers */
+#rowHeader {
+    font-weight: bold;
+    background-color:#0044FF;
+    color: white;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+th, td {
+    padding: 0;
+    text-align: center;
+}
+
+th {
+    background-color: #0044ff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Checkerboard pattern for values */
+table tr:nth-child(odd) #value:nth-child(even),
+table tr:nth-child(even) #value:nth-child(odd) {
+    background-color: #D0E9FF;
+}
+
+/* Checkerboard pattern for column headers */
+table tr:nth-child(odd) #colHeader:nth-child(even),
+table tr:nth-child(even) #colHeader:nth-child(odd) {
+    background-color: #002bb6;
+}
+/* Checkerboard pattern for row headers */
+table tr:nth-child(odd) #rowHeader:nth-child(even),
+table tr:nth-child(even) #rowHeader:nth-child(odd) {
+    background-color: #002bb6;
+}
+

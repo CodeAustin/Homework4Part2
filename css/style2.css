@@ -1,0 +1,172 @@
+/***
+File: style.css
+Dynamic Multiplication Table Generator
+Author: Austin Nguyen
+Description: Styles for the multiplication table generator interface.
+***/
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f3f4f6;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styling */
+.form-container {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0044ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0033cc;
+}
+
+/* Slider Styling */
+.slider {
+    margin: 10px 0;
+}
+
+/* Tabs Container */
+#tabs {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#tabs ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+}
+
+#tabs ul li {
+    display: inline-flex;
+    margin-right: 5px;
+    position: relative;
+}
+
+#tabs ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f3f4f6;
+    color: #0044ff;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+}
+
+#tabs ul li a:hover,
+#tabs ul li a.ui-tabs-active {
+    background-color: #0044ff;
+    color: white;
+    border-bottom: none;
+}
+
+#tabs ul li .delete-tab {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+#tabs ul li .delete-tab:hover {
+    background-color: darkred;
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #0044ff;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #tabs {
+        max-width: 100%;
+    }
+}
