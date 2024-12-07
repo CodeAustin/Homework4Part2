@@ -1,4 +1,4 @@
-# Homework 4 Part 2: jQuery Input Validation
+# Homework 4 Part 2: jQuery Dynamic Table & Tabs
 
 This project is a dynamic webpage that allows users to generate a customizable multiplication table based on four numerical inputs: minimum and maximum values for rows and columns. The page is built with HTML, CSS, and JavaScript.
 
